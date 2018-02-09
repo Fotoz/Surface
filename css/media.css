@@ -1,18 +1,316 @@
 /*** ==================================================
 Desktop First
 ================================================== ***/
+
 @media only screen and (max-width: 1200px) {
-    
+
+	/*** Section - Header ***/
+
+	.site-header {
+		padding-bottom: 95px;
+	}
+	.site-header .page-wrapper {
+    	padding-top: 300px;
+	}
+	p[class$="part"] {
+    	font-size: 4.5em;
+    }
+    p.h-second-part::before {
+    	top: -260%;
+    }
+
 }
 @media only screen and (max-width: 992px) {
-    
+
+	/*** Section - Header ***/
+
+	.site-header > .page-wrapper {
+    	padding-top: 260px;
+	}
+	p[class$="part"] {
+    	font-size: 4em;
+    	letter-spacing: 3px;
+    	line-height: 1.25;
+    }
+    p.h-first-part {
+    	margin-left: 0;
+    	padding-left: 19%;
+    }
+    p.h-second-part {
+    	margin-right: 0;
+    	padding-left: 30%;
+    	text-align: initial;
+    	z-index: 50;
+    }
+    p.h-second-part::before {
+    	top: -100%;
+    	left: 50%;
+    	z-index: -10;
+    }
+    .main-nav,
+    .main-nav ul {
+    	position: initial;
+    }
+    .main-nav {
+		padding-top: 155px;
+    }
+    .main-nav ul {
+    	display: table;
+    	margin: 0 auto;
+    }
+    .main-nav li:not(:last-child) {
+    	margin-right: 55px;
+	}
+	.main-nav a {
+		font-size: 1em;
+	}
+	.buttons {
+		padding-top: 110px;
+	}
+	.first-button {
+		margin-right: 15px;
+	}
+	.second-button {
+		margin-left: 15px;
+	}
+
+}
+@media only screen and (max-width: 856px){
+
+	/*** Section -Header ***/
+
+	p.h-first-part {
+		padding-left: 14%;
+	}
+	p.h-second-part {
+		padding-left: 27%;
+	}
+
 }
 @media only screen and (max-width: 768px) {
-    
+
+    /*** Section - Header ***/
+
+    p.h-first-part {
+    	padding-left: 10%;
+    }
+    p.h-second-part {
+    	padding-left: 24%;
+    }
+    .main-nav li:not(:last-child) {
+    	margin-right: 35px;
+	}
+    .main-nav a {
+		font-size: .95em;
+	}
+	.buttons a {
+		font-size: .8em;
+	}
+	.first-button {
+	    padding: 15px 35px 15px 86px;
+	    margin-right: 10px;
+	}
+	.second-button {
+	    padding: 15px 65px 15px 95px;
+	    margin-left: 10px;
+	}
+	.first-button::before {
+	    font-size: 2.5em;
+	    top: 12px;
+	    left: 35px;
+	}
+	.second-button::before {
+	    font-size: 2em;
+	    top: 17px;
+	    left: 45px;
+	}
+
 }
-@media only screen and (max-width: 480px) {
-    
+@media only screen and (max-width: 696px) {
+
+	/*** Section - Header ***/
+
+	.site-header {
+		padding-bottom: 60px;
+	}
+	.site-header .page-wrapper {
+    	padding-top: 220px;
+	}
+	p[class$="part"] {
+    	font-size: 3.5em;
+    	line-height: 1.1;
+    }
+    p.h-first-part {
+    	padding-left: 8%;
+    }
+    p.h-second-part {
+    	padding-left: 22%;
+    }
+    p.h-second-part::before {
+    	width: 4px;
+    	height: 350px;
+    	top: -120%;
+    	left: 50%;
+    }
+    .main-nav {
+		padding-top: 120px;
+    }
+    .main-nav li:not(:last-child) {
+    	margin-right: 30px;
+	}
+    .main-nav a {
+		font-size: .9em;
+	}
+    .buttons {
+		padding-top: 80px;
+	}
+
+}
+@media only screen and (max-width: 586px) {
+
+	/*** Section - Header ***/
+
+	p[class$="part"] {
+    	font-size: 3em;
+    }
+    p.h-first-part {
+    	padding-left: 6%;
+    }
+    p.h-second-part {
+    	padding-left: 17%;
+    }
+    p.h-second-part::before {
+    	top: -120%;
+    	left: 50%;
+    	height: 300px;
+    }
+    .main-nav li:not(:last-child) {
+    	margin-right: 25px;
+	}
+    .main-nav a {
+		font-size: .8em;
+	}
+	.buttons a {
+		font-size: .7em;
+	}
+	.first-button {
+	    padding: 12px 30px 12px 50px;
+	    margin-right: 5px;
+	}
+	.second-button {
+	    padding: 12px 50px 12px 66px;
+	    margin-left: 5px;
+	}
+	.first-button::before {
+	    top: 9px;
+	    left: 20px;
+	}
+	.second-button::before {
+	    top: 13px;
+	    left: 30px;
+	}
+
+}
+@media only screen and (max-width: 480px){
+
+    /*** Section - Header ***/
+
+	.site-header {
+		padding-bottom: 40px;
+	}
+	.site-header .page-wrapper {
+    	padding-top: 190px;
+	}
+	a.info {
+		display: none;
+	}
+	.site-name {
+		top: 35px;
+		left: calc(50% - 77px);
+	}
+	p[class$="part"] {
+    	font-size: 2.5em;
+    	line-height: 1.3;
+    	letter-spacing: 3px;
+    }
+    p.h-first-part {
+    	padding-left: 7%;
+    }
+    p.h-second-part {
+    	padding-left: 22%;
+    }
+    p.h-second-part::before {
+    	top: -120%;
+    	left: 50%;
+    	width: 4px;
+    }
+    .main-nav {
+    	padding-top: 70px;
+    }
+	.buttons {
+		padding-top: 40px;
+	}
+	.buttons a {
+		font-size: .6em;
+	}
+	.first-button::before {
+	    top: 10px;
+	}
+	.second-button::before {
+	    top: 14px;
+	}
+
 }
 @media only screen and (max-width: 320px) {
-    
+
+	.page-wrapper {
+        padding: 10px;
+    }
+
+	/*** Section - Header ***/
+
+	.site-name {
+		font-size: 1.5em;
+		left: calc(50% - 57px);
+	}
+	p[class$="part"] {
+    	font-size: 2em;
+    }
+    p.h-first-part {
+    	padding-left: 0;
+    }
+    p.h-second-part {
+    	padding-left: 12%;
+    }
+    p.h-second-part::before {
+    	top: -130%;
+    	height: 250px;
+    }
+    .main-nav ul {
+		text-align: center;
+	}
+	.main-nav li:nth-child(3) {
+		margin-right: 0;
+	}
+	.main-nav a {
+		font-size: .75em;
+	}
+	.buttons a {
+		font-size: .55em;
+	}
+	.first-button {
+	    padding: 10px 15px 10px 35px;
+	}
+	.second-button {
+	    padding: 10px 30px 10px 45px;
+	}
+	.first-button::before {
+	    top: 7px;
+	    left: 10px;
+	}
+	.second-button::before {
+	    top: 11px;
+	    left: 18px;
+	}
+
 }

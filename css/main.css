@@ -2,39 +2,49 @@
 Fonts
 ================================================== ***/
 
-
+@font-face {
+    font-family: 'Proxima Nova Light';
+    src: url('../fonts/ProximaNova-Light.eot');
+    src: url('../fonts/ProximaNova-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/ProximaNova-Light.woff') format('woff'),
+    url('../fonts/ProximaNova-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Proxima Nova Regular';
+    src: url('../fonts/ProximaNova-Regular.eot');
+    src: url('../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/ProximaNova-Regular.woff') format('woff'),
+    url('../fonts/ProximaNova-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Proxima Nova Semibold';
+    src: url('../fonts/ProximaNova-Semibold.eot');
+    src: url('../fonts/ProximaNova-Semibold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/ProximaNova-Semibold.woff') format('woff'),
+    url('../fonts/ProximaNova-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Proxima Nova Bold';
+    src: url('../fonts/ProximaNova-Bold.eot');
+    src: url('../fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/ProximaNova-Bold.woff') format('woff'),
+    url('../fonts/ProximaNova-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
 
 /*** ==================================================
 Basic Settings
 ================================================== ***/
 
-*::-webkit-input-placeholder {
-    color: #666;
-    opacity: 1;
-}
-*:-moz-placeholder {
-    color: #666;
-    opacity: 1;
-}
-*::-moz-placeholder {
-    color: #666;
-    opacity: 1;
-}
-*:-ms-input-placeholder {
-    color: #666;
-    opacity: 1;
-}
-*:focus::-webkit-input-placeholder {
-    color: transparent;
-}
-*:focus:-moz-placeholder {
-    color: transparent;
-}
-*:focus::-moz-placeholder {
-    color: transparent;
-}
-*:focus:-ms-input-placeholder {
-    color: transparent;
+* {
+    box-sizing: border-box;
 }
 html,
 body {
@@ -42,6 +52,7 @@ body {
 }
 body {
     font-size: 16px;
+    font-family: 'Proxima Nova Regular';
     min-width: 320px;
     position: relative;
     line-height: 1.65;
@@ -52,33 +63,180 @@ ol {
     list-style: none;
 }
 p {
-    /*margin: 0;*/
+    margin: 0;
 }
 a {
     text-decoration: none;
 }
-
+strong {
+    font-family: 'Proxima Nova Semibold', sans-serif;
+}
 .h1,
 .h2,
 .h3,
 .h4,
 .h5,
 .h6 {
-    text-transform: uppercase;
     line-height: 1.4;
-    /*margin: 0;*/
+    margin: 0;
+}
+.clearfix::before,
+.clearfix::after {
+    content: '';
+    display: table;
+    clear: both;
 }
 .img-responsive {
     display: block;
     max-width: 100%;
     height: auto;
 }
+.page-wrapper {
+    max-width: 1560px;
+    margin: 0 auto;
+    padding: 0 15px;
+    position: relative;
+}
 
 /*** ==================================================
-Section - 
+Section - Header
 ================================================== ***/
 
-
+.site-header {
+    background: url(../img/header-bg.jpg) no-repeat center/cover;
+    color: #fff;
+    text-transform: uppercase;
+    padding-bottom: 110px;
+    position: relative;
+    z-index: 5;
+}
+.site-header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #090c35;
+    opacity: .9;
+    z-index: -5;
+}
+.site-header .page-wrapper {
+    padding-top: 380px;
+}
+.site-name {
+    position: absolute;
+    top: 50px;
+    left: 15px;
+    font: 2em 'Proxima Nova Bold', sans-serif;
+}
+a.info {
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    font: .875em 'Proxima Nova Light', sans-serif;
+    color: #fff;
+    letter-spacing: .04em;
+    transition: color .3s;
+}
+a.info:hover {
+    color: #9071ea;
+}
+p[class$="part"] {
+    font: 5.5em 'Proxima Nova Bold', sans-serif;
+    letter-spacing: 5px;
+    line-height: 1.1;
+}
+p.h-first-part {
+    margin-left: -5px;
+    position: relative;
+    z-index: 100;
+}
+p.h-second-part {
+    text-align: right;
+    margin-right: -5px;
+    position: relative;
+}
+p.h-second-part::before {
+    content: '';
+    position: absolute;
+    top: -210%;
+    left: 34%;
+    width: 5px;
+    height: 400px;
+    background: #5e3db3;
+    transform: rotate(35deg);
+    z-index: 10;
+}
+.main-nav {
+    position: relative;
+}
+.main-nav ul {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+}
+.main-nav li {
+    display: inline-block;
+}
+.main-nav li:not(:last-child) {
+    margin-right: 42px;
+}
+.main-nav a {
+    font: .875em 'Proxima Nova Light', sans-serif;
+    color: #9071ea;
+    letter-spacing: .06em;
+    transition: color .3s;
+}
+.main-nav a:hover {
+    color: #fff;
+}
+.buttons {
+    width: 50%;
+    float: left;
+    padding-top: 200px;
+}
+.buttons a {
+    font: .875em 'Proxima Nova Light', sans-serif;
+    letter-spacing: 0.06em;
+    display: inline-block;
+    background: #5e3db3;
+    border-radius: 2.5em;
+    color: #fff;
+    border: none;
+    outline: none;
+    position: relative;
+    transition: all .4s;
+}
+.buttons a:hover {
+    background: #442f81;
+}
+.first-button {
+    padding: 20px 60px 20px 110px;
+    margin-right: 25px;
+    float: right;
+}
+.second-button {
+    padding: 20px 90px 20px 120px;
+    margin-left: 25px;
+}
+.first-button::before {
+    content: '\f179';
+    font-family: 'Font Awesome 5 Brands';
+    font-size: 3em;
+    position: absolute;
+    top: 15px;
+    left: 40px;
+}
+.second-button::before {
+    content: '\f3ab';
+    font-family: 'Font Awesome 5 Brands';
+    font-size: 2.5em;
+    position: absolute;
+    top: 20px;
+    left: 60px;
+}
 
 /*** ==================================================
 Section - 
