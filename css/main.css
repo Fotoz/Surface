@@ -71,16 +71,19 @@ a {
 strong {
     font-family: 'Proxima Nova Semibold', sans-serif;
 }
+:focus {
+    outline: none; /* убираем outline у слайдера Slick */
+}
 .h1,
 .h2,
 .h3,
 .h4,
 .h5,
 .h6 {
+    text-transform: uppercase;
     line-height: 1.4;
     margin: 0;
 }
-.clearfix::before,
 .clearfix::after {
     content: '';
     display: table;
@@ -91,7 +94,7 @@ strong {
     max-width: 100%;
     height: auto;
 }
-.page-wrapper {
+.container {
     max-width: 1560px;
     margin: 0 auto;
     padding: 0 15px;
@@ -108,7 +111,7 @@ Section - Header
     text-transform: uppercase;
     padding-bottom: 110px;
     position: relative;
-    z-index: 5;
+    z-index: 10;
 }
 .site-header::after {
     content: '';
@@ -119,9 +122,9 @@ Section - Header
     height: 100%;
     background: #090c35;
     opacity: .9;
-    z-index: -5;
+    z-index: -10;
 }
-.site-header .page-wrapper {
+.site-header .container {
     padding-top: 380px;
 }
 .site-name {
@@ -142,25 +145,28 @@ a.info {
 a.info:hover {
     color: #9071ea;
 }
-p[class$="part"] {
+.h1 {
     font: 5.5em 'Proxima Nova Bold', sans-serif;
     letter-spacing: 5px;
     line-height: 1.1;
+    position: relative;
 }
-p.h-first-part {
+.h1 span {
+    display: block;
+}
+.h1 span:first-child {
     margin-left: -5px;
     position: relative;
     z-index: 100;
 }
-p.h-second-part {
+.h1 span:last-child {
     text-align: right;
     margin-right: -5px;
-    position: relative;
 }
-p.h-second-part::before {
+.h1::before {
     content: '';
     position: absolute;
-    top: -210%;
+    top: -58%;
     left: 34%;
     width: 5px;
     height: 400px;
@@ -239,16 +245,91 @@ p.h-second-part::before {
 }
 
 /*** ==================================================
-Section - 
+Section - Athlets
 ================================================== ***/
 
-
+.s-athlets,
+.s-players {
+    position: relative;
+}
+.s-athlets::before {
+    content: '';
+    position: absolute;
+    top: 50px;
+    right: 50%;
+    bottom: -20px;
+    left: 0;
+    background: url(../img/athlets-bg.png) no-repeat 80%/contain;
+    z-index: 30;
+}
+.inner-athlets {
+    width: 50%;
+    margin-left: 50%;
+    padding: 50px 0 50px 50px;
+}
+.h2 {
+    font: 5.5em 'Proxima Nova Bold', sans-serif;
+    color: #e7e7e7;
+}
+.connection .h2 {
+    padding: 40px 0 60px;
+}
+.h3 {
+    font: 2.25em 'Proxima Nova Bold', sans-serif;
+    color: #c1c1c1;
+    padding-bottom: 15px;
+}
+.h3 sup {
+    font-size: 50%;
+    color: #000;
+    border-bottom: 5px solid #5e3db3;
+    margin-right: 15px;
+    top: -.6em;
+}
+.growth .h3 sup {
+    border-color: #fff;
+}
+.h3 + p {
+    font-size: 1.25em;
+    letter-spacing: 1px;
+    line-height: 1.4;
+}
+.growth p {
+    color: #fff;
+}
+.connection {
+    background: #fff;
+}
+.collaboration {
+    background: #f6f4fa;
+}
+.s-athlets .growth {
+    background: #5e3db3;
+}
 
 /*** ==================================================
-Section - 
+Section - Players
 ================================================== ***/
 
-
+.s-players::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: 0;
+    bottom: 50px;
+    left: 50%;
+    background: url(../img/players-bg.png) no-repeat 20%/contain;
+}
+.inner-players {
+    width: 50%;
+    padding: 50px 25px 50px 130px;
+}
+.s-players .growth {
+    background: #090c35;
+}
+.s-players .growth .h3 sup {
+    color: #9173e6;
+}
 
 /*** ==================================================
 Section - 

@@ -9,43 +9,65 @@ Desktop First
 	.site-header {
 		padding-bottom: 95px;
 	}
-	.site-header .page-wrapper {
+	.site-header .container {
     	padding-top: 300px;
 	}
-	p[class$="part"] {
+	.h1 {
     	font-size: 4.5em;
     }
-    p.h-second-part::before {
-    	top: -260%;
+    .h1::before {
+    	top: -78%;
     }
+
+    /*** Sections - Athlets & Players ***/
+
+	.inner-athlets {
+	    padding: 40px 0 40px 40px;
+	}
+	.inner-players {
+	    padding: 40px 0 40px 100px;
+	}
+	.h2 {
+	    font-size: 4.5em;
+	}
+	.connection .h2 {
+	    padding: 30px 0 50px;
+	}
+	.h3 {
+		font-size: 2em;
+	}
+	.h3 + p {
+		font-size: 1.125em;
+	}
 
 }
 @media only screen and (max-width: 992px) {
 
 	/*** Section - Header ***/
 
-	.site-header > .page-wrapper {
+	.site-header .container {
     	padding-top: 260px;
 	}
-	p[class$="part"] {
+	.h1 {
     	font-size: 4em;
     	letter-spacing: 3px;
     	line-height: 1.25;
+    	max-width: 594px;
+    	margin: 0 auto;
     }
-    p.h-first-part {
+    .h1 span:first-child {
     	margin-left: 0;
-    	padding-left: 19%;
     }
-    p.h-second-part {
+    .h1 span:last-child {
     	margin-right: 0;
-    	padding-left: 30%;
+    	padding-left: 105px;
     	text-align: initial;
     	z-index: 50;
     }
-    p.h-second-part::before {
-    	top: -100%;
+    .h1::before {
+    	top: -80px;
     	left: 50%;
-    	z-index: -10;
+    	z-index: -5;
     }
     .main-nav,
     .main-nav ul {
@@ -74,31 +96,48 @@ Desktop First
 		margin-left: 15px;
 	}
 
-}
-@media only screen and (max-width: 856px){
+	/*** Sections - Athlets & Players ***/
 
-	/*** Section -Header ***/
-
-	p.h-first-part {
-		padding-left: 14%;
+	[class|="inner"] {
+		width: 55%;
 	}
-	p.h-second-part {
-		padding-left: 27%;
+	.inner-athlets {
+	    padding-left: 30px;
+	    margin-left: 45%;
+	}
+	.inner-players {
+	    padding-left: 50px;
+	}
+	.s-athlets::before {
+		top: 0;
+	    right: 55%;
+	    bottom: 0;
+	    background-position: -15px;
+	}
+	.s-players::before {
+		top: 30px;
+	    left: 55%;
+	    bottom: 30px;
+	    background-position: 0;
 	}
 
 }
 @media only screen and (max-width: 768px) {
 
     /*** Section - Header ***/
-
-    p.h-first-part {
-    	padding-left: 10%;
+	
+	.h1 {
+    	font-size: 3.5em;
+    	max-width: 526px;
     }
-    p.h-second-part {
-    	padding-left: 24%;
+    .h1 span:last-child {
+    	padding-left: 95px;
+    }
+    .h1::before {
+    	top: -95px;
     }
     .main-nav li:not(:last-child) {
-    	margin-right: 35px;
+    	margin-right: 30px;
 	}
     .main-nav a {
 		font-size: .95em;
@@ -125,64 +164,119 @@ Desktop First
 	    left: 45px;
 	}
 
+	/*** Sections - Athlets & Players ***/
+
+	.s-athlets,
+	.s-players {
+		padding-top: 400px;
+	}
+	.connection .h2 {
+		display: none;
+	}
+	[class|="inner"] {
+		width: 100%;
+		margin-left: 0;
+	}
+	.s-athlets::before {
+		top: 85px;
+	    right: 0;
+	    background-position: center;
+	    max-height: 350px;
+	}
+	.s-players::before {
+		top: 85px;
+	    left: 0;
+	    max-height: 350px;
+	    background-position: center;
+		z-index: 30;
+	}
+	.s-athlets::after,
+	.s-players::after {
+	    font: 4em 'Proxima Nova Bold', sans-serif;
+	    color: #e7e7e7;
+	    text-transform: uppercase;
+	    text-align: center;
+	    position: absolute;
+	    top: 10px;
+	    width: 100%;
+	}
+	.s-athlets:after {
+		content: 'athlets';
+	}
+	.s-players::after {
+	    content: 'players';
+	}
+	.h3 {
+		font-size: 1.9em;
+	}
+	.h3 + p {
+		font-size: 1em;
+	}
+	[class|="inner"] {
+		padding: 70px 30px;
+	}
+	.connection,
+	.s-athlets .growth,
+	.s-players .growth {
+		background: #f6f4fa;
+	}
+	.s-players .growth .h3 sup {
+		color: #000;
+	}
+	.growth .h3 sup {
+		border-color: #5e3db3;
+	}
+	.growth p {
+		color: #000;
+	}
+	/* Slick-dots */
+	ul.slick-dots {
+		bottom: 15px;
+	}
+	.slick-dots li button::before {
+		font-size: 50px;
+		color: #d8d8d8;
+		opacity: 1;
+	}
+	.slick-dots li.slick-active button::before {
+		color: #5c37b2;
+	}
+	.slick-dotted.slick-slider {
+		margin-bottom: 0;
+	}
+
 }
-@media only screen and (max-width: 696px) {
+@media only screen and (max-width: 576px) {
 
 	/*** Section - Header ***/
 
 	.site-header {
 		padding-bottom: 60px;
 	}
-	.site-header .page-wrapper {
+	.site-header .container {
     	padding-top: 220px;
 	}
-	p[class$="part"] {
-    	font-size: 3.5em;
-    	line-height: 1.1;
+	a.info {
+		display: none;
+	}
+	.site-name {
+		top: 35px;
+		left: calc(50% - 77px);
+	}
+	.h1 {
+    	font-size: 2.8em;
+    	max-width: 430px;
     }
-    p.h-first-part {
-    	padding-left: 8%;
+    .h1 span:last-child {
+    	padding-left: 77px;
     }
-    p.h-second-part {
-    	padding-left: 22%;
-    }
-    p.h-second-part::before {
-    	width: 4px;
-    	height: 350px;
-    	top: -120%;
-    	left: 50%;
+    .h1::before {
+    	top: -93px;
+		width: 4px;
+		height: 350px;
     }
     .main-nav {
 		padding-top: 120px;
-    }
-    .main-nav li:not(:last-child) {
-    	margin-right: 30px;
-	}
-    .main-nav a {
-		font-size: .9em;
-	}
-    .buttons {
-		padding-top: 80px;
-	}
-
-}
-@media only screen and (max-width: 586px) {
-
-	/*** Section - Header ***/
-
-	p[class$="part"] {
-    	font-size: 3em;
-    }
-    p.h-first-part {
-    	padding-left: 6%;
-    }
-    p.h-second-part {
-    	padding-left: 17%;
-    }
-    p.h-second-part::before {
-    	top: -120%;
-    	left: 50%;
-    	height: 300px;
     }
     .main-nav li:not(:last-child) {
     	margin-right: 25px;
@@ -190,16 +284,17 @@ Desktop First
     .main-nav a {
 		font-size: .8em;
 	}
+    .buttons {
+		padding-top: 80px;
+	}
 	.buttons a {
 		font-size: .7em;
 	}
 	.first-button {
 	    padding: 12px 30px 12px 50px;
-	    margin-right: 5px;
 	}
 	.second-button {
 	    padding: 12px 50px 12px 66px;
-	    margin-left: 5px;
 	}
 	.first-button::before {
 	    top: 9px;
@@ -218,77 +313,88 @@ Desktop First
 	.site-header {
 		padding-bottom: 40px;
 	}
-	.site-header .page-wrapper {
-    	padding-top: 190px;
-	}
-	a.info {
-		display: none;
+	.site-header .container {
+    	padding-top: 195px;
 	}
 	.site-name {
-		top: 35px;
-		left: calc(50% - 77px);
+		font-size: 1.7em;
+		left: calc(50% - 66px);
 	}
-	p[class$="part"] {
-    	font-size: 2.5em;
-    	line-height: 1.3;
-    	letter-spacing: 3px;
+    .h1 {
+    	font-size: 2em;
+    	max-width: 290px;
     }
-    p.h-first-part {
-    	padding-left: 7%;
+    .h1 span:last-child {
+    	padding-left: 28px;
     }
-    p.h-second-part {
-    	padding-left: 22%;
-    }
-    p.h-second-part::before {
-    	top: -120%;
-    	left: 50%;
-    	width: 4px;
+    .h1::before {
+    	top: -63px;
+		height: 250px;
     }
     .main-nav {
     	padding-top: 70px;
     }
+    .main-nav ul {
+		text-align: center;
+	}
 	.buttons {
 		padding-top: 40px;
 	}
 	.buttons a {
-		font-size: .6em;
+		font-size: .55em;
+	}
+	.first-button {
+	    padding: 10px 15px 10px 35px;
+	    margin-right: 5px;
+	}
+	.second-button {
+	    padding: 10px 30px 10px 45px;
+	    margin-left: 5px;
 	}
 	.first-button::before {
-	    top: 10px;
+	    top: 7px;
+	    left: 10px;
 	}
 	.second-button::before {
-	    top: 14px;
+	    top: 11px;
+	    left: 18px;
+	}
+
+	/*** Sections - Athlets & Players ***/
+
+	.s-athlets,
+	.s-players {
+		padding-top: 350px;
+	}
+	.s-athlets::before,
+	.s-players::before {
+		top: 70px;
+	    max-height: 300px;
+	}
+	.s-athlets::after,
+	.s-players::after {
+		font-size: 3em;
+	}
+	.h3 {
+		font-size: 1.7em;
+	}
+	.h3 + p {
+		font-size: .9em;
+		letter-spacing: .7px;
+	}
+	[class|="inner"] {
+		padding: 60px 15px;
 	}
 
 }
 @media only screen and (max-width: 320px) {
 
-	.page-wrapper {
+	.container {
         padding: 10px;
     }
 
 	/*** Section - Header ***/
 
-	.site-name {
-		font-size: 1.5em;
-		left: calc(50% - 57px);
-	}
-	p[class$="part"] {
-    	font-size: 2em;
-    }
-    p.h-first-part {
-    	padding-left: 0;
-    }
-    p.h-second-part {
-    	padding-left: 12%;
-    }
-    p.h-second-part::before {
-    	top: -130%;
-    	height: 250px;
-    }
-    .main-nav ul {
-		text-align: center;
-	}
 	.main-nav li:nth-child(3) {
 		margin-right: 0;
 	}
@@ -311,6 +417,38 @@ Desktop First
 	.second-button::before {
 	    top: 11px;
 	    left: 18px;
+	}
+
+	/*** Sections - Athlets & Players ***/
+
+	.s-athlets,
+	.s-players {
+		padding-top: 320px;
+	}
+	.s-athlets::before,
+	.s-players::before {
+		top: 60px;
+	    max-height: 280px;
+	}
+	.s-athlets::after,
+	.s-players::after {
+		font-size: 2.5em;
+	}
+	.h3 {
+		padding-bottom: 10px;
+	}
+	.h3 sup {
+		margin-right: 10px;
+	}
+	[class|="inner"] {
+		padding: 50px 5px;
+	}
+	/* Slick-dots */
+	.slick-dots li {
+		margin: 0;
+	}
+	.slick-dots li button::before {
+		font-size: 40px;
 	}
 
 }
