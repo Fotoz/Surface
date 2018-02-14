@@ -1,5 +1,8 @@
 $(function() {
 
+// trackpad-scroll-emulator
+	$('.wrapper').TrackpadScrollEmulator();
+
 // slick
 	$(window).on("load resize", function() {
 		var width = $(document).width();
