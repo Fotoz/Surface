@@ -393,6 +393,21 @@ Desktop First
         padding: 10px;
     }
 
+    /*** Hidden Scrollbar ***/
+
+    *::-webkit-scrollbar {
+		display: none;
+    }
+    *:-moz-scrollbar {
+    		display: none;
+    }
+    *::-moz-scrollbar {
+    		display: none;
+    }
+    *:-ms-input-scrollbar {
+		display: none;
+    }
+
 	/*** Section - Header ***/
 
 	.main-nav li:nth-child(3) {
