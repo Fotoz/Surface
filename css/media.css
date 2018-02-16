@@ -40,6 +40,37 @@ Desktop First
 		font-size: 1.125em;
 	}
 
+	/*** Section - Just do it ***/
+
+	.s-just-do-it p {
+		font-size: 1.3em;
+		padding-top: 70px;
+	}
+	.s-just-do-it p::after {
+		bottom: -70px;
+	}
+	.s-just-do-it .number {
+		top: 163px;
+		left: calc(50% - 60px);
+		width: 120px;
+		height: 120px;
+	}
+	.s-just-do-it .number span {
+		font-size: 1.25em;
+	}
+	.inner-be-active,
+	.inner-find-contact,
+	.inner-work-it {
+	    height: 630px;
+	}
+	.inner-be-active,
+	.inner-work-it {
+	    padding: 180px 0 0 100px;
+	}
+	.inner-find-contact {
+	    padding-top: 138px;
+	}
+
 }
 @media only screen and (max-width: 992px) {
 
@@ -98,7 +129,8 @@ Desktop First
 
 	/*** Sections - Athlets & Players ***/
 
-	[class|="inner"] {
+	.inner-athlets,
+	.inner-players {
 		width: 55%;
 	}
 	.inner-athlets {
@@ -119,6 +151,33 @@ Desktop First
 	    left: 55%;
 	    bottom: 30px;
 	    background-position: 0;
+	}
+
+	/*** Section - Just do it ***/
+
+	.s-just-do-it p {
+		padding-top: 50px;
+	}
+	.s-just-do-it p::after {
+		bottom: -60px;
+	}
+	.s-just-do-it .number {
+		top: 30px;
+		left: calc(50% - 50px);
+		width: 100px;
+		height: 100px;
+	}
+	.inner-be-active,
+	.inner-find-contact,
+	.inner-work-it {
+	    height: 530px;
+	}
+	.inner-be-active,
+	.inner-work-it {
+	    padding: 130px 0 0 15px;
+	}
+	.inner-find-contact {
+	    padding-top: 130px;
 	}
 
 }
@@ -173,7 +232,8 @@ Desktop First
 	.connection .h2 {
 		display: none;
 	}
-	[class|="inner"] {
+	.inner-athlets,
+	.inner-players {
 		width: 100%;
 		margin-left: 0;
 	}
@@ -212,7 +272,8 @@ Desktop First
 	.h3 + p {
 		font-size: 1em;
 	}
-	[class|="inner"] {
+	.inner-athlets,
+	.inner-players {
 		padding: 70px 30px;
 	}
 	.connection,
@@ -243,6 +304,41 @@ Desktop First
 	}
 	.slick-dotted.slick-slider {
 		margin-bottom: 0;
+	}
+
+	/*** Section - Just do it ***/
+
+	.s-just-do-it > div {
+		padding-top: 500px;
+	}
+	.h2 {
+		font-size: 3.6em;
+	}
+	.be-active::before,
+	.find-contact::before,
+	.work-it::before {
+		right: 0;
+		left: 0;
+		bottom: 300px;
+	}
+	.s-just-do-it p {
+		padding-top: 20px;
+		max-width: 100%;
+	}
+	.s-just-do-it p::after {
+		bottom: -30px;
+	}
+	.s-just-do-it .number {
+		top: -70px;
+		left: 30px;
+	}
+	.inner-be-active,
+	.inner-find-contact,
+	.inner-work-it {
+		width: 100%;
+	    height: 300px;
+		margin-left: 0;
+		padding: 50px 15px 0;
 	}
 
 }
@@ -306,11 +402,11 @@ Desktop First
 	}
 
 }
-@media only screen and (max-width: 480px) {]
+@media only screen and (max-width: 480px) {
 
     /*** Hidden Scrollbar ***/
 
-/*    ::-webkit-scrollbar {
+	/*::-webkit-scrollbar {
 		display: none;
     }*/
 
@@ -388,15 +484,55 @@ Desktop First
 		font-size: .9em;
 		letter-spacing: .7px;
 	}
-	[class|="inner"] {
+	.inner-athlets,
+	.inner-players {
 		padding: 60px 15px;
+	}
+
+	/*** Section - Just do it ***/
+
+	.s-just-do-it > div {
+		padding-top: 350px;
+	}
+	.h2 {
+		font-size: 3em;
+	}
+	.be-active::before,
+	.find-contact::before,
+	.work-it::before {
+		bottom: 250px;
+	}
+	.s-just-do-it p {
+		font-size: 1.1em;
+		padding-top: 15px;
+	}
+	.s-just-do-it p::after {
+		bottom: -20px;
+	}
+	.s-just-do-it .number {
+		width: 80px;
+		height: 80px;
+		top: -60px;
+		left: 15px;
+	}
+	.s-just-do-it .number span {
+		font-size: 1em;
+	}
+	.s-just-do-it .number span::after {
+		height: 4px;
+	}
+	.inner-be-active,
+	.inner-find-contact,
+	.inner-work-it {
+	    height: 250px;
+	    padding: 40px 0 0;
 	}
 
 }
 @media only screen and (max-width: 320px) {
 
 	.container {
-        padding: 10px;
+        padding: 0 10px;
     }
 
 	/*** Section - Header ***/
@@ -446,7 +582,8 @@ Desktop First
 	.h3 sup {
 		margin-right: 10px;
 	}
-	[class|="inner"] {
+	.inner-athlets,
+	.inner-players {
 		padding: 50px 5px;
 	}
 	/* Slick-dots */
@@ -455,6 +592,35 @@ Desktop First
 	}
 	.slick-dots li button::before {
 		font-size: 40px;
+	}
+
+	/*** Section - Just do it ***/
+
+	.s-just-do-it > div {
+		padding-top: 350px;
+	}
+	.h2 {
+		font-size: 2.5em;
+	}
+	.be-active::before,
+	.find-contact::before,
+	.work-it::before {
+		bottom: 230px;
+	}
+	.s-just-do-it p::after {
+		bottom: -20px;
+	}
+	.s-just-do-it .number {
+		width: 70px;
+		height: 70px;
+		top: -50px;
+		left: 10px;
+	}
+	.inner-be-active,
+	.inner-find-contact,
+	.inner-work-it {
+	    height: 230px;
+	    padding-top: 30px;
 	}
 
 }
