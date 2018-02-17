@@ -10,7 +10,7 @@ Desktop First
 		padding-bottom: 95px;
 	}
 	.site-header .container {
-    	padding-top: 300px;
+		padding-top: 300px;
 	}
 	.h1 {
     	font-size: 4.5em;
@@ -19,13 +19,16 @@ Desktop First
     	top: -78%;
     }
 
-    /*** Sections - Athlets & Players ***/
+	/*** Sections - Athlets & Players ***/
 
 	.inner-athlets {
 	    padding: 40px 0 40px 40px;
 	}
 	.inner-players {
 	    padding: 40px 0 40px 100px;
+	}
+	.inner-athlets br {
+		display: none;
 	}
 	.h2 {
 	    font-size: 4.5em;
@@ -69,6 +72,34 @@ Desktop First
 	}
 	.inner-find-contact {
 	    padding-top: 138px;
+	}
+
+	/*** Section - Footer ***/
+
+	.footer-logo {
+	    border-radius: 25px;
+	    padding: 20px 17px;
+	    margin-right: 30px;
+	}
+	.footer-logo .fas,
+	.footer-caption p:first-child {
+	    font-size: 4.5em;
+	}
+	.footer-caption p:last-child {
+		font-size: 1.9em;
+	}
+	.footer-caption::before {
+	    top: -44px;
+	    left: 65px;
+	}
+	.footer-caption::after {
+	    top: -119px;
+	    left: 400px;
+	    height: 350px;
+	}
+	.bottom-line {
+	    padding: 40px;
+	    margin-top: 170px;
 	}
 
 }
@@ -180,6 +211,38 @@ Desktop First
 	    padding-top: 130px;
 	}
 
+	/*** Section - Footer ***/
+
+	.site-footer {
+		padding-top: 200px;
+	}
+	.footer-logo .fas,
+	.footer-caption p:first-child {
+	    font-size: 4em;
+	}
+	.footer-caption p:first-child {
+		letter-spacing: 3px;
+	}
+	.footer-caption p:last-child,
+	.social-buttons li a {
+		font-size: 1.7em;
+	}
+	.footer-caption::before {
+	    top: -48px;
+	    left: 55px;
+	}
+	.footer-caption::after {
+	    top: -123px;
+	    left: 345px;
+	}
+	.bottom-line {
+		padding: 30px 0;
+	}
+	.bottom-line .site-name,
+	.bottom-line a.info {
+		display: none;
+	}
+
 }
 @media only screen and (max-width: 768px) {
 
@@ -196,7 +259,7 @@ Desktop First
     	top: -95px;
     }
     .main-nav li:not(:last-child) {
-    	margin-right: 30px;
+    	margin-right: 28px;
 	}
     .main-nav a {
 		font-size: .95em;
@@ -341,6 +404,50 @@ Desktop First
 		padding: 50px 15px 0;
 	}
 
+	/*** Section - Footer ***/
+
+	.site-footer {
+		padding-top: 120px;
+	}
+	.footer-content {
+	    display: block;
+	    text-align: center;
+	}
+	.footer-logo {
+		display: table;
+		margin: 0 auto 80px;
+	}
+	.footer-caption {
+		display: table;
+		margin: 0 auto;
+	}
+	.footer-caption p:first-child {
+	    font-size: 3.25em;
+	}
+	.footer-caption p:last-child,
+	.social-buttons li a {
+		font-size: 1.5em;
+	}
+	.footer-caption::before {
+		width: 4px;
+    	height: 150px;
+	    top: -33px;
+	    left: 45px;
+	}
+	.footer-caption::after {
+		width: 4px;
+    	height: 300px;
+	    top: -108px;
+	    left: 285px;
+	}
+	.site-footer .buttons {
+	    padding-top: 130px;
+	}
+	.bottom-line {
+		padding: 20px 0;
+		margin-top: 120px;
+	}
+
 }
 @media only screen and (max-width: 576px) {
 
@@ -375,7 +482,7 @@ Desktop First
 		padding-top: 120px;
     }
     .main-nav li:not(:last-child) {
-    	margin-right: 25px;
+    	margin-right: 21px;
 	}
     .main-nav a {
 		font-size: .8em;
@@ -403,12 +510,6 @@ Desktop First
 
 }
 @media only screen and (max-width: 480px) {
-
-    /*** Hidden Scrollbar ***/
-
-	/*::-webkit-scrollbar {
-		display: none;
-    }*/
 
     /*** Section - Header ***/
 
@@ -442,8 +543,12 @@ Desktop First
 	.buttons {
 		padding-top: 40px;
 	}
+	.main-nav a {
+		font-size: .75em;
+	}
 	.buttons a {
 		font-size: .55em;
+		box-shadow: 4px 8px 24px #0a0e34;
 	}
 	.first-button {
 	    padding: 10px 15px 10px 35px;
@@ -528,6 +633,47 @@ Desktop First
 	    padding: 40px 0 0;
 	}
 
+	/*** Section - Footer ***/
+
+	.site-footer {
+		padding-top: 90px;
+	}
+	.footer-logo {
+	    border-radius: 20px;
+	    padding: 17px 15px;
+	    margin-bottom: 60px;
+	}
+	.footer-logo .fas {
+		font-size: 2.8em;
+	}
+	.footer-caption p:first-child {
+	    font-size: 2em;
+	}
+	.footer-caption p:last-child {
+		font-size: .95em;
+	}
+	.footer-caption::before {
+		width: 3px;
+    	height: 80px;
+	    top: -14px;
+	    left: 28px;
+	}
+	.footer-caption::after {
+		width: 3px;
+    	height: 150px;
+	    top: -49px;
+	    left: 183px;
+	}
+	.site-footer .buttons {
+	    padding-top: 70px;
+	}
+	.bottom-line {
+		margin-top: 90px;
+	}
+	.social-buttons li a {
+		font-size: 1.2em;
+	}
+
 }
 @media only screen and (max-width: 320px) {
 
@@ -539,26 +685,6 @@ Desktop First
 
 	.main-nav li:nth-child(3) {
 		margin-right: 0;
-	}
-	.main-nav a {
-		font-size: .75em;
-	}
-	.buttons a {
-		font-size: .55em;
-	}
-	.first-button {
-	    padding: 10px 15px 10px 35px;
-	}
-	.second-button {
-	    padding: 10px 30px 10px 45px;
-	}
-	.first-button::before {
-	    top: 7px;
-	    left: 10px;
-	}
-	.second-button::before {
-	    top: 11px;
-	    left: 18px;
 	}
 
 	/*** Sections - Athlets & Players ***/
